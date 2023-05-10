@@ -5,3 +5,5 @@
 69-3 Style Header and create simple banner
 
 69-4 Style Banner Component with gradient overlay
+
+69-5 Create About section with Image Relative Position
