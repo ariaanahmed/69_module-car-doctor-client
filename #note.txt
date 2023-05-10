@@ -3,3 +3,5 @@
 69-2 Set basic Layout for Footer and header
 
 69-3 Style Header and create simple banner
+
+69-4 Style Banner Component with gradient overlay
