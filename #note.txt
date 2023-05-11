@@ -7,3 +7,11 @@
 69-4 Style Banner Component with gradient overlay
 
 69-5 Create About section with Image Relative Position
+
+69-6 Load Services fake data and display service Card
+
+69-7 (Recap) Create a simple Login page with firebase integration
+
+69-8 (Recap) Sign Up page setup and create Auth Context setup
+
+69-9 (Recap) Create a user and Module Summary and Home work
