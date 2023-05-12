@@ -15,3 +15,13 @@
 69-8 (Recap) Sign Up page setup and create Auth Context setup
 
 69-9 (Recap) Create a user and Module Summary and Home work
+
+70-1 Project and set basic server
+
+npm i express cors mongodb dotenv
+
+create database > db name and collection name > carDoctorsServices > services > insert a document > black humburger menu > {} <- click on this icon
+
+70-2 Insert bulk Data In Database and Load services data
+
+70-3 Create checkout Form and load single service data
