@@ -3,12 +3,10 @@ import { useLoaderData } from "react-router-dom";
 const Checkout = () => {
 
     const services = useLoaderData();
-
     const {_id, title} = services;
-
     return (
         <div>
-            This is checkout: {title} {_id}
+            This is checkout: {title}
             <form>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div className="form-control">
