@@ -9,7 +9,9 @@ const Services = () => {
         fetch('http://localhost:5000/services')
             .then((res) => res.json())
             .then((data) => setServices(data))
-            .catch((error) => console.log(error))
+            .catch((error) => {
+                console.log(error)
+            })
     }, [])
 
     return (

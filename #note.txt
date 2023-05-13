@@ -25,3 +25,39 @@ create database > db name and collection name > carDoctorsServices > services > 
 70-2 Insert bulk Data In Database and Load services data
 
 70-3 Create checkout Form and load single service data
+
+load all the data:--=-=-
+
+    const serviceCollection = client.db('theCarDoctor').collection('services');
+
+    app.get('/services', async(req, res) => {
+      const cursor = serviceCollection.find();
+      const result = await cursor.toArray();
+      res.send(result)
+    });
+
+load single data with id:--=-=-
+
+    app.get('/services/:id', async(req, res) => {
+      const id = req.params.id;
+      const query = {_id: new ObjectId(id)}
+      const options = {
+        projection: {_id: 1, title: 1, service_id: 1}
+      }
+      const result = await serviceCollection.findOne(query, options);
+      res.send(result)
+    })
+
+70-4 extract booking service Data
+
+70-5 Save order on the order collection using Post Method
+
+ekta single data insert/post/add korar jonno eta
+
+  app.post('/bookings', async(req, res) => {
+      const booking = req.body;
+      console.log(booking)
+      const result = await bookingCollection.insertOne(booking)
+      res.send(result);
+    })
+
