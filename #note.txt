@@ -61,3 +61,15 @@ ekta single data insert/post/add korar jonno eta
       res.send(result);
     })
 
+70-6 Use Query parameter to load user specific data
+
+query = '  ?email=gari@bari.com&sort=1  '
+
+70-7 Display bookings and Service image in a tabular format
+
+70-8 Create Delete API and Delete a service Booking
+
+70-9 Module summary and update booking using Patch
+
+put = new bhabe add kore
+patch = jeta thake seta ke update kore
