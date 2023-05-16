@@ -73,3 +73,16 @@ query = '  ?email=gari@bari.com&sort=1  '
 
 put = new bhabe add kore
 patch = jeta thake seta ke update kore
+
+71-1 Module Introduction Project setup and Auth redirect
+
+71-2 Filter orders info by email address Introduction JWT token
+
+booking > newwork > fetch xhr > select a mail > header > copy the header link and visite to know hte infor are public or not
+
+jokhon ekta user login kore tokhon tokhon backend ekta token generate kore and se token ta client side e ashe ebong eita ke store kora hoi local storage and http browser cookie te. local storage er thek http only ta ektu besi secure. local storage and browser cookie dui tay sompurno secure na
+
+as a summary of JWT
+i. industry standard
+ii. securely transmits information between parties as a json object
+iii. digitally signed
