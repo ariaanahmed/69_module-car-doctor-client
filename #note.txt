@@ -86,3 +86,22 @@ as a summary of JWT
 i. industry standard
 ii. securely transmits information between parties as a json object
 iii. digitally signed
+
+
+71-3 How does JWT token works and create access token secret
+
+localstorge theke sob token dekhar jonno java script er xss (cross side scripting) use korlei hoi
+
+https://jwt.io/ -> libraries -> Filter by -> nodejs -> https://github.com/auth0/node-jsonwebtoken -> 
+npm install jsonwebtoken (server side e eta install korte hobe)
+-> const jwt = require('jsonwebtoken');
+->  require('crypto').randomBytes(64).toString('hex')
+-> uporer cmd ta diyay ekta secret key generate hobe .evn file a rekhe conncec korte hboe site er sathe
+
+71-4 Create JWT Token on server, Get jwt token on client side
+
+71-5 (advanced) Send jwt token in the server, verify and decode jwt token
+
+71-6 (Recap) JWT token verify and Handle 401, 403.
+
+71-7 Create JWT token for Sign Up and Social Login users
