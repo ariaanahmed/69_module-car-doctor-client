@@ -2,6 +2,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import image from "../../assets/images/login/login.svg"
 import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProviders";
+import SocialLogin from "../shared/socialLogin/SocialLogin";
 
 const Login = () => {
     const [message, setMessage] = useState('')
@@ -21,30 +22,9 @@ const Login = () => {
 
         signIn(email, password).then((result) => {
             const user = result.user;
-            const loggedUser = {
-                email: user.email
-            }
-            console.log(loggedUser)
-
-            form.reset()
+            console.log(user)
+            navigate(from, { replace: true })
             setMessage('logged in successfully')
-            fetch('http://localhost:5000/jwt', {
-                method: 'POST',
-                headers: {
-                    'content-type' : 'application/json'
-                },
-                body: JSON.stringify(loggedUser)
-            }).then((res) => res.json()).then((data) => {
-                console.log('jwt response', data)
-                // warning: local storage not best place
-                localStorage.setItem('car-access-token', data.token)
-                navigate(from, {replace: true})
-            })
-            .catch((error) => {
-                console.log(error)
-            })
-        }).catch((error) => {
-            setMessage(error.message)
         })
     }
 
@@ -72,7 +52,8 @@ const Login = () => {
                             </div>
                         </form>
                         <p className="my-4 text-center">New to cardoctor? <Link className="text-orange-600 font-semibold" to="/signup">Sign Up</Link></p>
-                        <p><small>{message}</small></p>
+                        <p className="text-center font-bold text-red-500"><small>{message}</small></p>
+                        <SocialLogin />
                     </div>
                 </div>
             </div>

@@ -105,3 +105,5 @@ npm install jsonwebtoken (server side e eta install korte hobe)
 71-6 (Recap) JWT token verify and Handle 401, 403.
 
 71-7 Create JWT token for Sign Up and Social Login users
+
+71-8 Deploy to vercel, firebase and push updates to client side

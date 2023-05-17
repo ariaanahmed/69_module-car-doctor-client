@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import image from "../../assets/images/login/login.svg"
 import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProviders";
+import SocialLogin from "../shared/socialLogin/SocialLogin";
 
 const SignUp = () => {
 
@@ -57,6 +58,7 @@ const SignUp = () => {
                         </form>
                         <p className="my-4 text-center">Already Have an account <Link className="text-orange-600 font-semibold" to="/login">Login</Link></p>
                         <p><small>{message}</small></p>
+                        <SocialLogin/>
                     </div>
                 </div>
             </div>
