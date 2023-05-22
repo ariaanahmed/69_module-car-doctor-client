@@ -146,3 +146,9 @@ j. check whether token has the email that matches with the request email
 
 sort {"price" : -1} - decending (200, 150, 35, 20, 15 etc.) [boro theke chhoto]
 sort {"price" : 1} - Ascending (15, 20, 40, 200, 352 etc.) -> [chhoto theke boro]
+
+73_5-3 Indexing and text search in mongodb
+
+mongodb search text in name field ignore case
+
+what is mongodb Indexing
