@@ -107,3 +107,42 @@ npm install jsonwebtoken (server side e eta install korte hobe)
 71-7 Create JWT token for Sign Up and Social Login users
 
 71-8 Deploy to vercel, firebase and push updates to client side
+
+live site: https://the-car-doctor-e5d6a.web.app/
+
+71-9 (Recap) Module Summary
+
+jwt:
+step 1: create token
+a. after user login send user basic info to create token(client)
+b. in the server side: install npm i jsonwebtoken
+c. import jsonwebtoken
+d. jwt.sign(payload, secret, {expires})
+e. return token to the client side
+
+f. after receiving the token store it in either httponly cookies or localstorge
+g. use a general space  onAuthStateChange > AuthProvider.jsx
+
+step 2: send token to the server
+a. for sensitive api call () send authrization headers {authrization: 'Bearer token'}
+
+step 3: verify token
+a. create a function called verifyJWT <- (middleware)
+b. this function have three params: req, res, next
+c. first check whether the authorization headers exists
+d. if not. then send 401
+e. get the token out of the authorization header <- (split kore korte oi eta)
+f. call the jwt.verify (token, secret, (err, decoded))
+g. if error ->  send 401
+h. set decoded to the req object so that we can retrieve it later call
+i. call the next () to go to the next function
+
+j. check whether token has the email that matches with the request email
+
+
+73_5-1 Sort services by price and double data type
+
+73_5-2 Price range 100 to 300 and Mongodb operators
+
+sort {"price" : -1} - decending (200, 150, 35, 20, 15 etc.) [boro theke chhoto]
+sort {"price" : 1} - Ascending (15, 20, 40, 200, 352 etc.) -> [chhoto theke boro]
